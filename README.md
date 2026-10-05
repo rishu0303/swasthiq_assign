@@ -4,6 +4,10 @@
 
 A local Python REST API and React interface for the synthetic Sunrise Clinic assignment. The agent uses a deterministic conversation controller and six validated tools; no LLM or patient data service is required.
 
+**Live demo:** [swasthiq-assign-sanf.onrender.com](https://swasthiq-assign-sanf.onrender.com)
+
+**Health check:** [swasthiq-assign-sanf.onrender.com/api/health](https://swasthiq-assign-sanf.onrender.com/api/health)
+
 ## Run
 
 Requires Python 3.9+, Node.js, and npm. From the repository root:
@@ -67,8 +71,8 @@ The rule-based language parser is intentionally limited. It covers the supplied 
 
 ## Submission items
 
-`/backend`, `/frontend`, `/adversarial`, `DECISIONS.md`, `PLAN.md`, tests, and `AI_TRANSCRIPT.txt` are included. The narrated failure-analysis video is generated locally in `output/`, which is excluded from Git. A live hosted link and submission email are still pending.
+`/backend`, `/frontend`, `/adversarial`, `DECISIONS.md`, `PLAN.md`, tests, and `AI_TRANSCRIPT.txt` are included. The narrated failure-analysis video is generated locally in `output/`, which is excluded from Git. The submission email is still pending.
 
 ## Deploy on Render
 
-This repository includes a multi-stage `Dockerfile` and `render.yaml` for one Render web service. The Docker build compiles React, then runs the Python API and serves the built frontend from the same origin. The image defaults to `PORT=10000`, which Render can override; the server binds to all interfaces when that variable is present. Push the repository to GitHub, create a Render Blueprint from `render.yaml`, and verify `/api/health` and the app at the resulting public URL. Handoff history is in memory and resets when a free instance restarts.
+This repository includes a multi-stage `Dockerfile` and `render.yaml` for one Render web service. The Docker build compiles React, then runs the Python API and serves the built frontend from the same origin. The image defaults to `PORT=10000`, which Render can override; the server binds to all interfaces when that variable is present. The live service was created from the public GitHub repository on Render's free plan in Singapore, with `/api/health` as its health check. Auto-deploy is off; after pushing code changes, manually deploy the latest commit in Render. Free instances can spin down when idle, and handoff history resets when the instance restarts.
