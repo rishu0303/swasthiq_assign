@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: swasthiq-front-desk
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeployTrigger: "off"

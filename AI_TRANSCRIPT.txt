@@ -1,0 +1,9 @@
+User prompts given to the coding assistant for this project:
+
+1. "analye the project and alayse the assignment"
+2. "plan these things and implementation"
+3. "all the things have been fixed?"
+4. "the task given in the assignement was completed or not? and 1st give me overview of the sys and what was the assignement task in simple way explane and what approach didi you used and what things i need to do to submit the assignment"
+5. "hye help me with the deployment link"
+
+The assistant first analyzed the starter pack and assignment PDF, then implemented the local project in response to prompt 2. This file records the user's prompts; it does not include private system or tool instructions.

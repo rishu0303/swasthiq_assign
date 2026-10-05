@@ -1,0 +1,1 @@
+"""Clinic front desk service."""
